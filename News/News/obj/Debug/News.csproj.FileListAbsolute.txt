@@ -1,0 +1,11 @@
+C:\Users\Alhamda\AppData\Local\Temporary Projects\News\bin\Debug\News.exe.config
+E:\MII\News\News\bin\Debug\News.exe.config
+E:\MII\News\News\bin\Debug\News.exe
+E:\MII\News\News\bin\Debug\News.pdb
+E:\MII\News\News\bin\Debug\EntityFramework.dll
+E:\MII\News\News\bin\Debug\EntityFramework.SqlServer.dll
+E:\MII\News\News\bin\Debug\EntityFramework.xml
+E:\MII\News\News\bin\Debug\EntityFramework.SqlServer.xml
+E:\MII\News\News\obj\Debug\News.csprojResolveAssemblyReference.cache
+E:\MII\News\News\obj\Debug\News.exe
+E:\MII\News\News\obj\Debug\News.pdb
