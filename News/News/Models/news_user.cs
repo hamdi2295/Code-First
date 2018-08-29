@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace News.Models
 {
+    /*
+    Functioin untuk mendeklarasikan nama table dan field table, sehingga database beserta tabel akan te generate
+    /*
     public class news_user
     {
         [Key]
