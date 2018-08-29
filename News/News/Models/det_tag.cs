@@ -11,6 +11,10 @@ namespace News.Models
     {
         [Key]
         public int id { get; set; }
-        public int news_report_id { get; set; }
+        public string det_tag_name { get; set; }
+        public int tagid { get; set; }
+
+        public virtual tag tags { get; set; }
+
     }
 }

@@ -54,20 +54,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\Category_Controller.cs" />
+    <Compile Include="Controllers\Det_Category_Controller.cs" />
+    <Compile Include="Controllers\Det_Tag_Controllers.cs" />
+    <Compile Include="Controllers\News_Report_Controller.cs" />
     <Compile Include="Controllers\News_User_Controller.cs" />
-    <Compile Include="Migrations\configuration.cs" />
+    <Compile Include="Controllers\Tag_Controller.cs" />
+    <Compile Include="Migrations\201808290738192_daiily.cs" />
+    <Compile Include="Migrations\201808290738192_daiily.Designer.cs">
+      <DependentUpon>201808290738192_daiily.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseContext.cs" />
     <Compile Include="Models\category.cs" />
     <Compile Include="Models\det_cat.cs" />
     <Compile Include="Models\det_tag.cs" />
     <Compile Include="Models\metadata.cs" />
-    <Compile Include="Models\MSreplication_options.cs" />
     <Compile Include="Models\news_report.cs" />
     <Compile Include="Models\news_user.cs" />
-    <Compile Include="Models\spt_fallback_db.cs" />
-    <Compile Include="Models\spt_fallback_dev.cs" />
-    <Compile Include="Models\spt_fallback_usg.cs" />
-    <Compile Include="Models\spt_monitor.cs" />
     <Compile Include="Models\tag.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,7 +80,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808290738192_daiily.resx">
+      <DependentUpon>201808290738192_daiily.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

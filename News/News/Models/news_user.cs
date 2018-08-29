@@ -21,6 +21,7 @@ namespace News.Models
         public string status { get; set; }
         public int pocket { get; set; }
         public string role { get; set; }
+        public virtual List<news_report> news_report { get; set; }
         
     }
 }

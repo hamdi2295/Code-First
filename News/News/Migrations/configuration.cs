@@ -1,22 +1,23 @@
-﻿namespace News.Migrations
+namespace News.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    
 
-    internal sealed class configuration : DbMigrationsConfiguration<News.Models.BaseContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<News.Models.BaseContext>
     {
-        public configuration()
+        public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
-            ContextKey = "BaseContext";
+            AutomaticMigrationsEnabled = false;
         }
 
         protected override void Seed(News.Models.BaseContext context)
         {
-            
+            //  This method will be called after migrating to the latest version.
+
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+            //  to avoid creating duplicate seed data.
         }
     }
 }

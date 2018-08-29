@@ -8,9 +8,9 @@ namespace News.Models
     public partial class BaseContext : DbContext
     {
         public BaseContext()
-            : base("NewsReport")
+            : base("Day_News")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BaseContext, News.Migrations.configuration>());
+            
 
         }
 

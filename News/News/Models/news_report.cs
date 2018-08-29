@@ -11,16 +11,18 @@ namespace News.Models
     {
         [Key]
         public int id { get; set; }
-        public int det_cat_id { get; set; }
         public DateTime news_date { get; set; }
         public string news_title { get; set; }
         public string news_lead { get; set; }
         public string news_body { get; set; }
         public string news_image { get; set; }
-        public int publisher_id { get; set; }
-        public string editor_id { get; set; }
         public string viewer { get; set; }
-        public int det_tag_id { get; set; }
         public int salary { get; set; }
+        public int det_tagid { get; set; }
+        public int news_userid { get; set; }
+        public int det_catid { get; set; }
+        public virtual det_tag dettag { get; set; }
+        public virtual news_user news_users { get; set; }
+        public virtual det_cat det_cats { get; set; }
     }
 }
