@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace News.Models
 {
+/*
+Function untuk men generate nama table "News_user" beserta field tabelnya.
+*/
     public class news_user
     {
         [Key]
