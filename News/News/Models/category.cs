@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace News.Models
 {
+    /*
+    Function category digunakan untuk men generate nama table ketia terjadi migration dari code menuju database
+    */
     public class category
     {
+        /*atribut yang akan mengisi field pada table category */
         [Key]
         public int id { get; set; }
         public string cat_name { get; set; }
-        public virtual List<det_cat> det_cat { get; set; }
-        public virtual List<news_report> news_report { get; set; }
-    }
+        public virtual List<det_cat> det_cat { get; set; }    }
 }

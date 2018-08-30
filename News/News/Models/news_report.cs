@@ -7,8 +7,10 @@ using System.Threading.Tasks;
 
 namespace News.Models
 {
+    /*Function ynews_report akan di generate menjadi table database saat terjadi proses migration */
     public class news_report
     {
+        /*attribut yang akan digunakan untuk men generate nama field dari table news_report */
         [Key]
         public int id { get; set; }
         public DateTime news_date { get; set; }

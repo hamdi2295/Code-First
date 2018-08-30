@@ -8,7 +8,7 @@ namespace News.Models
     public partial class BaseContext : DbContext
     {
         public BaseContext()
-            : base("Day_News")
+            : base("Beritaa_Hariann")
         {
             
 

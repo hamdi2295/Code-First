@@ -10,10 +10,13 @@ namespace News.Controllers
     class Tag_Controller
     {
         BaseContext _context = new BaseContext();
-
+        /* Function untuk proses input pilihan CRUD
+        1. Varible input digunakan untuk menyimpan nomor pilihan
+            */
+        int input;
         public void menu_tag()
         {
-            int input;
+            
             Controllers.Tag_Controller panggil = new Controllers.Tag_Controller();
             BaseContext _context = new BaseContext();
             Program call = new Program();
@@ -30,6 +33,9 @@ namespace News.Controllers
             Console.WriteLine("\n");
             Console.Write("Silahkan Pilih : "); int pil = Convert.ToInt32(Console.ReadLine());
 
+            /*
+            Kondisi apabila pilihan 1 maka akan memanggil function viewAll() dan seterunya
+    */
 
             switch (pil)
             {
@@ -44,11 +50,21 @@ namespace News.Controllers
                     panggil.update(input);
                     break;
                 case 4:
+                    Console.Write("Masukkan Id yang akan di Delete : "); input = Convert.ToInt32(Console.ReadLine());
+                    Delete(input);
+
                     break;
                 default:
                     break;
             }
         }
+
+
+        /*
+        1. Function Insert digunakan untuk menambahkan data category.
+        2. try dan catch digunakan untuk mengatasi error runtime yang bukan karena kesalahan penulisan code.
+        3. function void, sehingga tidak return value.
+    */
         public void insert()
         {
             Console.Write("Inputkan ID            : "); int id = Convert.ToInt32(Console.ReadLine());
@@ -72,6 +88,11 @@ namespace News.Controllers
             }
         }
 
+        /*
+        1. Function ViewAll dipakai untuk menampilkan data dari database, karena menggunakan entity framework, programmer tidak perlu melakukan query.
+        2. Data dari database akan dilooping dengan foreach selanjutnya disimpan pada variable getall,
+        3. Karena non void, maka variable getall akan di return nilainya.
+    */
         public List<tag> ViewAll()
         {
             var getall = _context.tag.ToList();
@@ -87,6 +108,11 @@ namespace News.Controllers
             return getall;
         }
 
+        /*
+        1. Function update merupakan entity framework yang berfungsi untuk melakukan update data tanpa melakukan proses query
+        2. int input merupakan parameter yang digunakan untuk merubah data sesuai dengan nilai yang dimiliki oleh parameter.
+        3. karena non void, maka parameter inpu akan di return nilainya.
+    */
         public int update(int input)
         {
             Program panggilvoid = new Program();
@@ -100,6 +126,11 @@ namespace News.Controllers
             return input;
         }
 
+        /*
+        1. Function GetById digunakan untuk cek id table yang diinputkan. apabila id sesuai dengan databse makan akan di simpan
+        kedalam objek call.
+        2. nilai parameter input yang telak dimasukkan kedalam objek call akan dikembalikan nilainya (return value)
+    */
         public tag GetById(int input)
         {
             tag call = _context.tag.Find(input);
@@ -110,6 +141,12 @@ namespace News.Controllers
             }
             return call;
         }
+
+        /*
+        1. Function delete merupkan entity framework yang digunakan untuk menghapus data table tanpa melakukan query
+        2. int input merupakan parameter yang berupa data id table.
+        3. parameter input akan dikembalikan nilainya karena merupakan void function
+    */
         public int Delete(int input)
         {
             using (var ctx = new BaseContext())

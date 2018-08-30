@@ -60,9 +60,9 @@
     <Compile Include="Controllers\News_Report_Controller.cs" />
     <Compile Include="Controllers\News_User_Controller.cs" />
     <Compile Include="Controllers\Tag_Controller.cs" />
-    <Compile Include="Migrations\201808290738192_daiily.cs" />
-    <Compile Include="Migrations\201808290738192_daiily.Designer.cs">
-      <DependentUpon>201808290738192_daiily.cs</DependentUpon>
+    <Compile Include="Migrations\201808300158466_beritaaaa.cs" />
+    <Compile Include="Migrations\201808300158466_beritaaaa.Designer.cs">
+      <DependentUpon>201808300158466_beritaaaa.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\BaseContext.cs" />
@@ -81,8 +81,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201808290738192_daiily.resx">
-      <DependentUpon>201808290738192_daiily.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201808300158466_beritaaaa.resx">
+      <DependentUpon>201808300158466_beritaaaa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

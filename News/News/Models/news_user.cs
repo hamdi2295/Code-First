@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace News.Models
 {
+    /*
+    Function news_user digunakan untuk men generate nama table ketia terjadi migration dari code menuju database
+    */
     public class news_user
     {
+        /*atribut yang akan mengisi field pada table news_user */
         [Key]
         public int id { get; set; }
         public string username { get; set; }
